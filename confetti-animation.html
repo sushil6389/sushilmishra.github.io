@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>confetti animation</title>
+	<style type="text/css">
+	html body{
+		margin: 0;
+		padding:0;
+	}
+	.wrapper{
+		position: relative;
+		width: 375px;
+		height: 467px;
+		margin: 80 auto;
+		background-color: #fefefe;
+		border: 20px solid #150f0f;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.main img{
+		position: relative;
+		top:80px;
+		width: 350px;
+	}
+	.confetti #img1{
+		position: absolute;
+		z-index: 1;
+		top: -667px;
+		left: -166px;
+		animation:confet 6s linear infinite;
+	}
+	@keyframes confet{
+		from{top:-667px;}
+		to{top:467px;}
+	}
+	.confetti #img2{
+		position: absolute;
+		z-index: 1;
+		top: -667px;
+		left: -166px;
+		animation:confet1 12s linear infinite;
+		
+	}
+	@keyframes confet1{
+		from{top:-667px;}
+		to{top:467px;}
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="confetti">
+		<img src="confetti.png" id="img1">
+		<img src="confetti.png" id="img2">
+	</div>
+	<div class="main">
+		<img src="doll.gif">
+	</div>
+</div>
+</body>
+</html>
